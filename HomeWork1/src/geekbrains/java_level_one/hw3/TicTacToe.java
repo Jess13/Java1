@@ -61,7 +61,6 @@ public class TicTacToe {
             if (map[i][1] == ox && map[i][2] == ox && map[i][3] == ox && map[i][4] == ox) return true;
             if (map[0][i] == ox && map[1][i] == ox && map[2][i] == ox && map[3][i] == ox) return true;
             if (map[1][i] == ox && map[2][i] == ox && map[3][i] == ox && map[4][i] == ox) return true;
-            if (map[i][i] == ox && map[i][i] == ox && map[i][i] == ox && map[i][i] == ox) return true;
         }
 
 
@@ -102,4 +101,21 @@ public class TicTacToe {
         if (map[y][x] != '*') return false; // если в ячейке не *, значит занята
         return true; // ячейка свободна
     }
+
+    // Продвинутый вариант проверки победы
+//    public static boolean checkLine(int x, int y, int vx, int vy, int l, char ox) {
+//        for (int i = 0; i < l; i++) {
+//            if (map[y + i * vy][x + i * vx] != ox) return false;
+//        }
+//        return true;
+//    }
+//    public static boolean checkWinCL(char ox) {
+//        for (int i = 0; i < 3; i++) {
+//            if (checkLine(0, i, 1, 0, 3, ox)) return true;
+//            if (checkLine(i, 0, 0, 1, 3, ox)) return true;
+//        }
+//        if (checkLine(0, 0, 1, 1, 3, ox)) return true;
+//        if (checkLine(0, 2, 1, -1, 3, ox)) return true;
+//        return false;
+//    }
 }

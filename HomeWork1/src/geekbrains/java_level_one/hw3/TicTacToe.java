@@ -59,8 +59,9 @@ public class TicTacToe {
         for (int i = 0; i < 5; i++) {
             if (map[i][0] == ox && map[i][1] == ox && map[i][2] == ox && map[i][3] == ox) return true;
             if (map[i][1] == ox && map[i][2] == ox && map[i][3] == ox && map[i][4] == ox) return true;
-            if (map[0][i] == ox && map[1][i] == ox && map[2][i] == ox && map[3][1] == ox) return true;
-            if (map[1][i] == ox && map[2][i] == ox && map[3][i] == ox && map[4][1] == ox) return true;
+            if (map[0][i] == ox && map[1][i] == ox && map[2][i] == ox && map[3][i] == ox) return true;
+            if (map[1][i] == ox && map[2][i] == ox && map[3][i] == ox && map[4][i] == ox) return true;
+            if (map[i][i] == ox && map[i][i] == ox && map[i][i] == ox && map[i][i] == ox) return true;
         }
 
 

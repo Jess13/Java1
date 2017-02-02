@@ -55,23 +55,17 @@ public class TicTacToe {
     }
 
     public static boolean checkWin(char ox) { // Проверяем победу
-        // Ищем заполненные горизонтальные линии
+
         for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
-                if (map[i][j] == ox && map[i][j+1] == ox && map[i][j+2] == ox && map[i][j+3] == ox) return true;
-            }
+            if (map[i][0] == ox && map[i][1] == ox && map[i][2] == ox && map[i][3] == ox) return true;
+            if (map[i][1] == ox && map[i][2] == ox && map[i][3] == ox && map[i][4] == ox) return true;
+            if (map[0][i] == ox && map[1][i] == ox && map[2][i] == ox && map[3][1] == ox) return true;
+            if (map[1][i] == ox && map[2][i] == ox && map[3][i] == ox && map[4][1] == ox) return true;
         }
-//        if (map[0][0] == ox && map[0][1] == ox && map[0][2] == ox) return true;
-//        if (map[1][0] == ox && map[1][1] == ox && map[1][2] == ox) return true;
-//        if (map[2][0] == ox && map[2][1] == ox && map[2][2] == ox) return true;
-        // Ищем заполненные вертикальные линии
-//        if (map[0][0] == ox && map[1][0] == ox && map[2][0] == ox) return true;
-//        if (map[0][1] == ox && map[1][1] == ox && map[2][1] == ox) return true;
-//        if (map[0][2] == ox && map[1][2] == ox && map[2][2] == ox) return true;
-        // Ищем заполненные диагональные линии
-//        if (map[0][0] == ox && map[1][1] == ox && map[2][2] == ox) return true;
-//        if (map[2][0] == ox && map[1][1] == ox && map[0][2] == ox) return true;
-        return false;        // если ни одной линии не нашли, значит игрок еще не победил
+
+
+
+        return false;
     }
 
     private static void humanTurn() { // ход человека

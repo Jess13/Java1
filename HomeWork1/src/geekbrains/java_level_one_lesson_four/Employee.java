@@ -3,8 +3,8 @@ package geekbrains.java_level_one_lesson_four;
 /**
  * Created by Jess on 03.02.2017.
  */
-public class Employee {
-    public String fio;
+ class Employee {
+    private String fio;
     private String position;
     private String phone_number;
     private int salary;
@@ -18,8 +18,27 @@ public class Employee {
         this.age = age;
     }
 
-    public static String (Employee) {
-        System.out.println();
+    Employee() {
+
+    }
+
+    void getEmployee() {
+        System.out.println("ФИО: " + this.fio);
+        System.out.println("Должность: " + this.position);
+        System.out.println("Телефон: " + this.phone_number);
+        System.out.println("Зарплата: " + this.salary);
+        System.out.println("Возраст: " + this.age);
+        System.out.println("\t");
+    }
+
+    void getEmployee(int _age){
+        if (this.age > _age) getEmployee();
+    }
+
+    void raiseSalary (Employee[] emp_mas_45){
+        for (int i = 0; i < emp_mas_45.length; i++){
+            if (emp_mas_45[i].age > 45) emp_mas_45[i].salary += 5000;
+        }
     }
 }
 

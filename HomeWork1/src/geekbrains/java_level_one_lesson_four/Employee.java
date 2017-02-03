@@ -17,5 +17,9 @@ public class Employee {
         this.salary = salary;
         this.age = age;
     }
+
+    public static String (Employee) {
+        System.out.println();
+    }
 }
 

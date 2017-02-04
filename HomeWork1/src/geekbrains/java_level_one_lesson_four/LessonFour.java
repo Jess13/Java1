@@ -32,5 +32,11 @@ public class LessonFour {
         System.out.println("Список сотрудников, старше 45 после повышения зарплаты");
         System.out.println("----------------");
         for (int i = 0; i < emp_mas.length; i++) emp_mas[i].getEmployee(45);
+
+        int ave_age = emp.average_age(emp_mas);
+        System.out.println("Средний возраст сотрудников: " + ave_age);
+
+        int ave_sal = emp.average_salary(emp_mas);
+        System.out.println("Средняя зарплата сотрудников: " + ave_sal);
     }
 }

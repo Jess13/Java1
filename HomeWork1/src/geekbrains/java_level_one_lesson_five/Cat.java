@@ -16,8 +16,8 @@ class Cat extends Animal{
         this.jumpHeight = jumpHeight;
     }
 
-//    String run() {
-//        this.name += " FAST_running";
-//        return this.name;
-//    }
+    String run() {
+        this.name += " FAST_running " + "Jumping metres " + jumpHeight;
+        return this.name;
+    }
 }

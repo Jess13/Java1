@@ -11,5 +11,6 @@ public class ClassWork {
         Dog tuz = new Dog("Tuzik", 3);
 
         System.out.println(mur.run());
+        System.out.println(mur.swim());
     }
 }

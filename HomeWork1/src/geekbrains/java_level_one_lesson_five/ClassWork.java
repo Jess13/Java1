@@ -6,11 +6,18 @@ package geekbrains.java_level_one_lesson_five;
 public class ClassWork {
     public static void main(String[] args) {
 
-        Cat mur = new Cat("Murka", 2, 2);
-        Horse beg = new Horse("Begunok", 4);
-        Dog tuz = new Dog("Tuzik", 3);
+        Animal mur = new Cat("Murka", 2);
+        Animal beg = new Horse("Begunok", 4);
+        Animal tuz = new Dog("Tuzik", 3);
 
-        System.out.println(mur.run());
-        System.out.println(mur.swim());
+        Animal [] zoo = {mur, beg, tuz};
+        for (int i = 0; i < zoo.length; i++) {
+            System.out.println(zoo[i].run());
+        }
+
+        for (int i = 0; i < zoo.length; i++) {
+            if (zoo[i] instanceof Cat)
+                System.out.println("Есть Cat");
+        }
     }
 }

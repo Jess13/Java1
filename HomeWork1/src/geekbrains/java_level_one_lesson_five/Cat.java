@@ -5,19 +5,13 @@ package geekbrains.java_level_one_lesson_five;
  */
 class Cat extends Animal{
 
-    private int jumpHeight;
-
     Cat(String name, int age) {
         super(name, age);
     }
 
-    Cat(String name, int age, int jumpHeight) {
-        super(name, age);
-        this.jumpHeight = jumpHeight;
-    }
-
+    @Override
     String run() {
-        this.name += " FAST_running " + "Jumping metres " + jumpHeight;
+        this.name += " FAST_running ";
         return this.name;
     }
 }

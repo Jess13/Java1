@@ -8,4 +8,10 @@ class Horse extends Animal{
     Horse (String name, int age) {
         super(name, age);
     }
+
+    @Override
+    String run() {
+        this.name += " FAST_running ";
+        return this.name;
+    }
 }

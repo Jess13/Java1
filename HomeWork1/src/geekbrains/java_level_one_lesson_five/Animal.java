@@ -3,7 +3,7 @@ package geekbrains.java_level_one_lesson_five;
 /**
  * Created by Jess on 08.02.2017.
  */
-class Animal {
+abstract class Animal {
     protected String name;
     protected int age;
 
@@ -12,10 +12,7 @@ class Animal {
         this.age = age;
     }
 
-    String run() {
-        this.name += " running";
-        return this.name;
-    }
+    abstract String run();
 
     boolean swim() {
         this.name += " swimming";

@@ -20,7 +20,7 @@ public class MyHomeWork_6 {
 
         for (int i = 1; i < 3; i++) {
             System.out.println("Input Sentence for " + i + " file");
-            se = "\n" + sc.nextLine();
+            se = sc.nextLine();
             try {
                 wr = new FileOutputStream(i + ".txt");
                 wr.write(se.getBytes());
@@ -40,11 +40,12 @@ public class MyHomeWork_6 {
                 int r;
                 do {
                     r = rd.read();
-                    System.out.println((char)r);
-                    ps.println((char)r);
+                    System.out.print((char)r);
+                    ps.print((char)r);
                 } while (r != -1);
                 rd.close();
                 ps.close();
+                System.out.println();
 
             } catch (Exception e) {
                 throw new RuntimeException(e);
